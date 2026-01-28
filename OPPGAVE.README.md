@@ -1,4 +1,4 @@
-#### Oppgaven:
+### Oppgaven:
 Du skal lage en enkel database for en bilutleie i Lucidchart.
 Målet er å kunne eksportere ER‑diagrammet til SQL‑script (MySQL).
 
@@ -18,13 +18,14 @@ Målet er å kunne eksportere ER‑diagrammet til SQL‑script (MySQL).
 - En bil kan ha mange leieavtaler over tid.
 - Én leieavtale gjelder alltid én bestemt kunde og én bestemt bil.
 
+**Bruker Historier:**
 
-__«Som kunde vil jeg kunne registrere meg med navn, telefonnummer og e‑post, slik at bilutleiefirmaet kan lage leieavtaler på meg.»__
+_«Som kunde vil jeg kunne registrere meg med navn, telefonnummer og e‑post, slik at bilutleiefirmaet kan lage leieavtaler på meg.»_
 
-__«Som ansatt vil jeg registrere nye biler med registreringsnummer, merke, modell, årsmodell og dagspris.»__
+_«Som ansatt vil jeg registrere nye biler med registreringsnummer, merke, modell, årsmodell og dagspris.»_
 
-__«Som ansatt vil jeg kunne opprette en leieavtale der jeg velger hvilken kunde som leier, hvilken bil som leies, startdato, sluttdato og total pris.»__
+_«Som ansatt vil jeg kunne opprette en leieavtale der jeg velger hvilken kunde som leier, hvilken bil som leies, startdato, sluttdato og total pris.»_
 
-__«Som ansatt vil jeg kunne se historikk: hvilke kunder har tidligere leid en bestemt bil, og hvilke biler har en kunde tidligere leid.»__
+_«Som ansatt vil jeg kunne se historikk: hvilke kunder har tidligere leid en bestemt bil, og hvilke biler har en kunde tidligere leid.»_
 
-__«Som kunde vil jeg kunne bestille ekstrautstyr (barnesete, GPS osv.) sammen med en leieavtale, slik at dette kan tas med i prisen.»__
+_«Som kunde vil jeg kunne bestille ekstrautstyr (barnesete, GPS osv.) sammen med en leieavtale, slik at dette kan tas med i prisen.»_

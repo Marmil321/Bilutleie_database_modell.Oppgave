@@ -45,6 +45,12 @@ CREATE TABLE `ekstra_utstyr` (
   PRIMARY KEY (`id`)
 );
 ```
+_**Begrunnelse for å ikke ha Ansatt tabell**_
+
+I bruker historiene står det "som ansatt..." men jeg har valgt å ikke lage noe tabell for ansatte, fordi jeg tenker det er bare ansatte som skal bruke systemet, så man trenger ikke å lagre noe om ansatte. Dette holder også systemet simplet hvis det blir kjørt på en ansatt sin maskin kan de lett registrere kunder.
+
+_Lett tilgjenglig system kan både være en fordel og ulempe_
+
 ---
 __For å legge til et forhold mellom tabellene trenger vi også:__
 

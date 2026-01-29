@@ -1,3 +1,5 @@
+## Oppgave besvarelse
+
 ### SQL Script:
 ```sql
 CREATE TABLE `kunde` (
@@ -5,13 +7,6 @@ CREATE TABLE `kunde` (
   `navn` VARCHAR(100),
   `telefon_nummer` VARCHAR(20),
   `email` VARCHAR(255),
-  PRIMARY KEY (`id`)
-);
-
-CREATE TABLE `ekstra_utstyr` (
-  `id` INT AUTO_INCREMENT,
-  `navn` VARCHAR(255),
-  `kostnad` DECIMAL(50,2),
   PRIMARY KEY (`id`)
 );
 
@@ -32,7 +27,21 @@ CREATE TABLE `utleie_avtale` (
   `startdato` DATETIME NOT NULL,
   `sluttdato` DATETIME NOT NULL,
   `total_pris` DECIMAL(50,2),
+  `utleie_ekstra_utstyr_id` INT NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `utleie_ekstra_utstyr` (
+  `id` INT AUTO_INCREMENT,
   `ekstra_utstyr_id` INT NOT NULL,
+  `total_kostnad` DECIMAL(50,2),
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `ekstra_utstyr` (
+  `id` INT AUTO_INCREMENT,
+  `navn` VARCHAR(255),
+  `kostnad` DECIMAL(50,2),
   PRIMARY KEY (`id`)
 );
 ```
@@ -49,8 +58,12 @@ ADD CONSTRAINT fk_bil
 FOREIGN KEY (bil_id) REFERENCES bil(id)
 
 ALTER TABLE utleie_avtale
+ADD CONSTRAINT fk_utleie_ekstra_utstyr
+FOREIGN KEY (utleie_ekstra_utstyr_id) REFERENCES utleie_ekstra_utstyr(id)
+
+ALTER TABLE utleie_ekstra_utstyr
 ADD CONSTRAINT fk_ekstra_utstyr
-FOREIGN KEY (ekstra_utstyr_id) REFERENCES ekstra_utstyr(id)
+FOREGIN KEY (ekstra_utstyr_id) REFERENCES ekstra_utstyr(id)
 ```
 ---
 ### Test Data
